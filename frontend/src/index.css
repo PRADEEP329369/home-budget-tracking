@@ -1,0 +1,47 @@
+/* Theme: white background, navy text, green / red accents.
+   Overriding Bootstrap's variables restyles every component at once. */
+:root {
+  --bs-body-bg: #ffffff;
+  --bs-body-color: #1e2a4a;
+  --bs-primary: #1e3a8a;
+  --bs-primary-rgb: 30, 58, 138;
+  --bs-success: #16a34a;
+  --bs-success-rgb: 22, 163, 74;
+  --bs-danger: #dc2626;
+  --bs-danger-rgb: 220, 38, 38;
+  --bs-secondary-color: #64748b;
+  --bs-border-radius: 0.6rem;
+}
+.btn-primary { --bs-btn-bg: #1e3a8a; --bs-btn-border-color: #1e3a8a; --bs-btn-hover-bg: #172c6b; --bs-btn-hover-border-color: #172c6b; }
+.btn-success { --bs-btn-bg: #16a34a; --bs-btn-border-color: #16a34a; }
+.btn-danger { --bs-btn-bg: #dc2626; --bs-btn-border-color: #dc2626; }
+.btn-outline-primary { --bs-btn-color: #1e3a8a; --bs-btn-border-color: #1e3a8a; --bs-btn-hover-bg: #1e3a8a; --bs-btn-hover-border-color: #1e3a8a; }
+.card { border: 1px solid #e2e8f0; border-radius: 0.8rem; background: #fff; }
+/* Page header: navy title with a thin line underneath */
+.app-header { border-bottom: 2px solid #e2e8f0; padding-bottom: 1rem; }
+.app-header h1 { color: #1e3a8a; }
+/* Table text a little larger and easier to read */
+.table { font-size: 0.95rem; }
+.table td, .table th { padding: 0.75rem 0.6rem; }
+/* On phones the Add buttons share the full width */
+@media (max-width: 575.98px) {
+  .action-buttons { width: 100%; }
+  .action-buttons .btn { flex: 1; }
+}
+/* Summary cards: white card with a coloured top edge */
+.summary-card { border-top: 4px solid; }
+.summary-card.income { border-top-color: #16a34a; }
+.summary-card.expense { border-top-color: #dc2626; }
+.summary-card.balance { border-top-color: #1e3a8a; }
+.summary-label { font-size: 0.8rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; color: #64748b; }
+/* Table */
+.table thead th { background: #f1f5f9; color: #475569; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.04em; border-bottom: 0; }
+/* Soft income / expense badges */
+.badge-income { background: #dcfce7; color: #15803d; }
+.badge-expense { background: #fee2e2; color: #b91c1c; }
+.form-control:focus { border-color: #1e3a8a; box-shadow: 0 0 0 0.2rem rgba(30, 58, 138, 0.15); }
+/* Bootstrap modal is shown with plain React state, so add the dark backdrop ourselves */
+.modal-backdrop-custom { background: rgba(15, 23, 42, 0.5); }
+.modal-content { border: 0; border-radius: 0.8rem; border-top: 4px solid #1e3a8a; }
+.modal-content.income { border-top-color: #16a34a; }
+.modal-content.expense { border-top-color: #dc2626; }
